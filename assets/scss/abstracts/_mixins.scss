@@ -1,0 +1,12 @@
+@mixin typoghraphystyle($font, $size, $weight, $lineheight , $color) {
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineheight;
+    color: $color;
+}
+@mixin typographyicon($size, $color) 
+{
+    font-size: $size;
+    color: $color;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- logo -->
+    <link rel="icon" href="assets/img/logo.png">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <!-- font -->
+    <link rel="stylesheet" href="assets/font/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="assets/font/material-icons/iconfont/material-icons.css">
+    <!--map-->
+    <link rel="stylesheet" href="assets/css/leaflet.css">
+    <title>AdBaz</title>
+</head>
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand ml-5 mr-2" href="index.html">
+        <img src="assets/img/logo-lg.png" width="30" height="28" alt="logo">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">صفحه اصلی <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ادباز
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">چرا ادباز</a>
+                <a class="dropdown-item" href="#"> تماس با ما </a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">قوانین و مقررات</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                پشتیبانی
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">راهنما و پشتیبانی</a>
+                <a class="dropdown-item" href="#">تماس با پشتیبانی</a> 
+            </li>
+          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown mr-auto">
+                <a class="nav-link dropdown-toggle square-round" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span>
+                    <i class="fas fa-search ml-2"></i>
+                  </span>
+                  دنبال چی میگردی؟
+                </a>
+                <div style="z-index: 9999;" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <form class="form-inline text-center" action="">
+                    <div>
+                        <div class="col-md-12">
+                            <input style="max-width: 40%;" type="text" name="keyword" class="form-control" placeholder="به دنبال...">
+                            در شهر
+                            <select style="max-width: 30%;" name="city" class="browser-default custom-select">
+                                <!--                        <option selected>کل کشور</option>-->
+                                
+                                    <option value="تهران">تهران</option>
+                                
+                                    <option value="مشهد">مشهد</option>
+                                
+                                    <option value="کرج">کرج</option>
+                                
+                                    <option value="اصفهان">اصفهان</option>
+                                
+                                    <option value="شیراز">شیراز</option>
+                                
+                                    <option value="تبریز">تبریز</option>
+                                
+                                    <option value="اهواز">اهواز</option>
+                                
+                                    <option value="قم">قم</option>
+                                
+                                    <option value="کرمانشاه">کرمانشاه</option>
+                                
+                                    <option value="رشت">رشت</option>
+                                
+                                    <option value="ارومیه">ارومیه</option>
+                                
+                                    <option value="همدان">همدان</option>
+                                
+                                    <option value="اراک">اراک</option>
+                                
+                                    <option value="کرمان">کرمان</option>
+                                
+                                    <option value="زاهدان">زاهدان</option>
+                                
+                                    <option value="یزد">یزد</option>
+                                
+                                    <option value="قزوین">قزوین</option>
+                                
+                                    <option value="بندرعباس">بندرعباس</option>
+                                
+                                    <option value="اردبیل">اردبیل</option>
+                                
+                                    <option value="زنجان">زنجان</option>
+                                
+                            </select>
+                        </div>
+                        <br>
+                        <hr>
+                        <div dir="rtl" class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                                <div class="card-header text-right" role="tab" id="headingOne1">
+                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                        <h5 style="font-size: 0.8rem !important;" class="mb-0"><i class="fa fa-filter"> فیلتر جستجو</i>
+                                        </h5>
+                                    </a>
+                                </div>
+                                <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                    <div class="text-right card-body">
+                                        حداقل قیمت
+                                        <input type="text" name="priceMin" class="form-control"> تومان
+                                    </div>
+                                    <div class="text-right card-body">
+                                        حداکثر قیمت
+                                        <input type="text" name="priceMax" class="form-control"> تومان
+                                    </div>
+                                    <div class="text-right card-body">
+                                        <input type="checkbox" id="latest" name="latest" value="true" checked="">
+                                        آگهی‌های ۱۰ روز اخیر را نشان بده
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="btn btn-info" type="submit">جستجو</button>
+                    </div>
+                </form>
+                  </div>
+                
+              </li>
+  
+            </ul>
+
+        </div>
+      </nav>
+      <!--main-->
+      <main class="p-3">
+        <div class="container">
+          <!--link-item-->
+          <div class="row" id="link-content">
+            <div class="col-md-8 mr-auto">
+             <div class="link-content-right">
+               <a href="#"><i class="fas fa-home"></i></a>
+               <span><i class="fas fa-angle-left"></i></span>
+               <a href="#">املاک</a>
+               <span><i class="fas fa-angle-left"></i></span>
+               <a href="#">خدمات املاک</a>
+               <span><i class="fas fa-angle-left"></i></span>
+               <a href="#"> پیش فروش</a>
+
+             </div>
+            </div>
+              <div class="col-md-4">
+                <div class="link-content-itemleft">
+                  <a href="#">بازگشت</a>
+                </div>
+          
+              </div>
+          </div>
+          <!-- Product details -->
+          <div class="row">
+            <!-- Product details content -->
+            <div class="col-md-5">
+             <div class="row" id="Product-details-content">
+               <div class="col-ml-12 bow-Shadows m-2">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row">دسته بندی</th>
+                    <td>پیش فروش</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">منبع</th>
+                    <td><a href="#">منبع آگهی</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">عنوان</th>
+                    <td>120/326/ پیش فروش</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">آگهی دهنده</th>
+                    <td>مشاور املاک</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">شماره تماس</th>
+                    <td> 555-555-555</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">تلفن </th>
+                    <td> 666666666666<td>
+                  </tr>
+                  <tr>
+                    <th scope="row">توضیحات </th>
+                    <td>
+                      <p>گروه مشاورین املاک میدان</p>
+                      <p>150-185-170-210-270 متر </p>
+                      <p>دید واحد ها: کوهستانی= پارک- دره-ولنجک</p>
+                      <p>زمان تحویل: 30 ماه. داخل واحد دیزاین شده با چرم و سنگ تراش</p>
+                      <p>سقف 12 متر روف گاردن با امکانات و تجهیزات رفاهی 800 متر سالن اجتماعات به همراه آسانسور اختصاصی و سونا و جکوزی 400 متر باشگاه ورزشی مجهر شده به سالن بازی کودکان 70 متر پارکینگ میهمان نقشه بینظسر- بهترین لوکیشن منطقه</p>
+                      <hr>
+                      <p>الهیه مریم شرقی پلاک 60 واحد 8 املاک میدان</p>
+                      <td>
+                  </tr>
+                  </tbody>
+                </table>
+               </div>
+             </div>
+            </div>
+             <!-- Product details map/slide -->
+            <div class="col-md-7">
+              <!-- slid show -->
+              <div class="row">
+                <div class="col-md-12 bow-Shadows m-2 p-2">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/pro/1.jpg" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/pro/2.jpg" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/pro/3.jpg" alt="Third slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/pro/4.jpg" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- map -->
+              <div class="row">
+              <div class="col-md-12 bow-Shadows m-2 p-2" id="map" style = "width: 900px; height: 400px">
+                  
+              </div>
+             </div>
+           
+            </div>
+          </div>
+          <!-- Similar ads -->
+          <div class="row" id="Similar-ads">
+            <div class="col-md-12 mt-2">
+              <h3>              
+                <small class="text-muted">آگهی های مشابه</small>
+              </h3>
+              <!-- similar item -->
+              <div class="row" id="item-ads">
+                <div class="col-md-3">
+                  <div class="card bow-Shadows m-2 p-2">
+                    <img class="card-img-top" src="assets/img/similar pro/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"> 12 متری خوش نقش</h5>
+                      <p class="card-text">بالکن، اپن، فرنگی، گاز رومیزی، لابی، درب ریموت، آنتن مرکزی، سرایدار، دوربین مدار بسته، آب، برق، گاز</p>
+                        <a href="#" class="btn btn-primary">اطلاعات بیشتر</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bow-Shadows m-2 p-2">
+                    <img class="card-img-top" src="assets/img/similar pro/2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"> 12 متری خوش نقش</h5>
+                      <p class="card-text">بالکن، اپن، فرنگی، گاز رومیزی، لابی، درب ریموت، آنتن مرکزی، سرایدار، دوربین مدار بسته، آب، برق، گاز</p>
+                      <a href="#" class="btn btn-primary">اطلاعات بیشتر</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bow-Shadows m-2 p-2">
+                    <img class="card-img-top" src="assets/img/similar pro/3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"> 12 متری خوش نقش</h5>
+                      <p class="card-text">بالکن، اپن، فرنگی، گاز رومیزی، لابی، درب ریموت، آنتن مرکزی، سرایدار، دوربین مدار بسته، آب، برق، گاز</p>
+                      <a href="#" class="btn btn-primary">اطلاعات بیشتر</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bow-Shadows m-2 p-2">
+                    <img class="card-img-top" src="assets/img/similar pro/4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"> 12 متری خوش نقش</h5>
+                      <p class="card-text">بالکن، اپن، فرنگی، گاز رومیزی، لابی، درب ریموت، آنتن مرکزی، سرایدار، دوربین مدار بسته، آب، برق، گاز</p>
+                      <a href="#" class="btn btn-primary">اطلاعات بیشتر</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+      <!-- footer -->
+      <footer>
+        <div class="row footer-Content pt-3 pb-3 pr-2 pl-2 ">
+          <div class="col-md-4" id="link-footer">
+            <p class="font-weight-bold">ادباز</p>
+            <a type="button" class="btn btn-link">چرا ادباز</a>
+            <a type="button" class="btn btn-link">تماس با ما</a>
+            <a type="button" class="btn btn-link">پرسش و پاسخ</a>
+            <a type="button" class="btn btn-link">قوانین و مقررات</a>
+          </div>
+          <div class="col-md-4" id="social-footer">
+            <p class="font-weight-bold">ادباز را در شبکه های اجتماعی دنبال کنید</p>
+            <div class="social">
+              <a href="#"><span class="social-item"><i class="fab fa-instagram"></i></span></a>
+              <a href="#"><span class="social-item"><i class="fab fa-telegram-plane"></i></span></a>
+              <a href="#"><span class="social-item"><i class="fab fa-pinterest"></i></span></a>
+              <a href="#"><span class="social-item"><i class="fab fa-twitter"></i></span></a>
+              
+            </div>
+          </div>
+          <div class="col-md-4" id="footer-app">
+            <a href="#"><img src="assets/img/app1.JPG" alt="app"></a>
+            <a href="#"><img src="assets/img/app2.JPG" alt="app"></a>
+        
+          </div>
+        </div>
+        <div class="row footer-copywriter p-2">
+          <div class="col-md-12 pl-2 pr-2">
+            <span >&copy; کلیه حقوق این سایت متعلق به ادباز می باشد </span>
+           
+       </div>
+        </div>
+      </footer>
+    <!-- dependency javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!-- map -->
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/map.js"></script>
+
+</body>
+</html>

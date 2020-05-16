@@ -1,0 +1,97 @@
+
+#link-content{
+background: #fff;
+border-radius: .3125rem;
+box-shadow: 0 1px 6px 0 rgba(0,0,0,.1);
+padding: 0;
+
+}
+
+.bow-Shadows{
+background: #fff;
+border-radius: .3125rem;
+box-shadow: 0 1px 6px 0 rgba(0,0,0,.1);
+padding: 0;
+}
+
+main{
+    
+    #Similar-ads{
+        h3 .text-muted{
+            @include typoghraphystyle("IRANYekanBold", 0.9375rem, 700, 1.3 , #b0b3b6 !important); 
+            margin: 0 0 1rem;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+        #item-ads{
+            h5{
+                @include typoghraphystyle("IRANYekanBold", 0.9375rem, 400, 1.4 , #030a17 !important); 
+            }
+            p{
+                @include typoghraphystyle("IRANYekanBold",0.75rem, 400, 1.4 , #999!important); 
+                
+            }
+            a{
+                text-align: center;
+                margin: 0 auto;
+                font-size: 0.80rem;
+            }
+        }
+
+    }
+    #link-content{
+        padding: 0.80rem ;
+        .link-content-right{
+            a{
+                @include typoghraphystyle("IRANYekanBold",0.85rem, 400, 1.4 , #030a17!important); 
+                display: inline-block;
+                cursor: pointer;
+                text-decoration: none;
+                vertical-align: middle;
+                transition: all 0.1s ease-in-out;
+                &:hover{
+                    color:rgb(243,81,81)!important;
+                }
+            }
+            span{
+               
+                font-size: .50rem;
+                color: #999;
+                 vertical-align: middle;
+                 margin: 0 0.5rem;
+               
+
+            }
+        }
+        .link-content-itemleft{
+            a{
+                @include typoghraphystyle("IRANYekanBold",0.85rem, 400, 1.4 , #030a17!important); 
+                display: inline-block;
+                cursor: pointer;
+                text-decoration: none;
+                vertical-align: middle;
+                transition: all 0.1s ease-in-out;
+                &:hover{
+                    color:rgb(243,81,81)!important;
+                }
+            }
+
+        }
+
+    }
+    #Product-details-content{
+        table{
+            th{
+                width: 25%;
+                @include typoghraphystyle("IRANYekanBold",0.87rem, 900, 1.4 , #030a17!important); 
+               
+            }
+            td{
+                width: 60%;
+                @include typoghraphystyle("IRANYekanBold",0.80rem, 400, 1.4 , rgb(95, 93, 93)!important); 
+              
+            }
+        }
+    }
+
+}

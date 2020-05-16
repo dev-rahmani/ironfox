@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- logo -->
+    <link rel="icon" href="assets/img/logo.png">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <!-- font -->
+    <link rel="stylesheet" href="assets/font/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="assets/font/material-icons/iconfont/material-icons.css">
+     <!--map-->
+    <link rel="stylesheet" href="assets/css/leaflet.css">
+    <title>AdBaz</title>
+</head>
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand ml-5 mr-2" href="index.html">
+        <img src="assets/img/logo-lg.png" width="30" height="28" alt="logo">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">صفحه اصلی <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ادباز
+              </a>
+              <div class="dropdown-menu align-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">چرا ادباز</a>
+                <a class="dropdown-item" href="#"> تماس با ما </a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">قوانین و مقررات</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-two" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                پشتیبانی
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown-two">
+                <a class="dropdown-item" href="#">راهنما و پشتیبانی</a>
+                <a class="dropdown-item" href="#">تماس با پشتیبانی</a> 
+            </li>
+          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown mr-auto">
+                <a class="nav-link dropdown-toggle square-round" href="#" id="navbarDropdown-tree" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span>
+                    <i class="fas fa-search ml-2"></i>
+                  </span>
+                  دنبال چی میگردی؟
+                </a>
+                <div id="index" style="z-index: 99999;" class="dropdown-menu" aria-labelledby="navbarDropdown-tree">
+                  <form class="form-inline text-center" action="">
+                    <div>
+                        <div class="col-md-12" style="font-size: 0.75rem;padding: 0.5rem;">
+                            <input style="max-width: 40%;" type="text" name="keyword" class="form-control" placeholder="به دنبال...">
+                            در شهر
+                            <select style="max-width: 40%;" name="city" class="browser-default custom-select">
+                                <!--                        <option selected>کل کشور</option>-->
+                                
+                                    <option value="تهران">تهران</option>
+                                
+                                    <option value="مشهد">مشهد</option>
+                                
+                                    <option value="کرج">کرج</option>
+                                
+                                    <option value="اصفهان">اصفهان</option>
+                                
+                                    <option value="شیراز">شیراز</option>
+                                
+                                    <option value="تبریز">تبریز</option>
+                                
+                                    <option value="اهواز">اهواز</option>
+                                
+                                    <option value="قم">قم</option>
+                                
+                                    <option value="کرمانشاه">کرمانشاه</option>
+                                
+                                    <option value="رشت">رشت</option>
+                                
+                                    <option value="ارومیه">ارومیه</option>
+                                
+                                    <option value="همدان">همدان</option>
+                                
+                                    <option value="اراک">اراک</option>
+                                
+                                    <option value="کرمان">کرمان</option>
+                                
+                                    <option value="زاهدان">زاهدان</option>
+                                
+                                    <option value="یزد">یزد</option>
+                                
+                                    <option value="قزوین">قزوین</option>
+                                
+                                    <option value="بندرعباس">بندرعباس</option>
+                                
+                                    <option value="اردبیل">اردبیل</option>
+                                
+                                    <option value="زنجان">زنجان</option>
+                                
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true" style="width: 95%; margin: 0 auto; " >
+                            <div class="card" id="menu-form" style="font-size: 0.75rem;">
+                                <div class="card-header text-right" style="
+                                padding: 0.50rem" role="tab" id="headingOne1">
+                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                        <h5 style="font-size: 0.8rem !important;" class="mb-0"><i class="fa fa-filter"> فیلتر جستجو</i>
+                                        </h5>
+                                    </a>
+                                </div>
+                                <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                    <div class="text-right card-body" style="
+                                    padding: 0.70rem;">
+                                        حداقل قیمت
+                                        <input type="text" name="priceMin" class="form-control" style="
+                                        max-width: 80%"> تومان
+                                    </div>
+                                    <div class="text-right card-body" style="
+                                    padding: 0.70rem;">
+                                        حداکثر قیمت
+                                        <input type="text" name="priceMax" class="form-control" style="
+                                        max-width: 80%"> تومان
+                                    </div>
+                                    <div class="text-right card-body" style="
+                                    padding: 0.52rem">
+                                        <input type="checkbox" id="latest" name="latest" value="true" checked="">
+                                        آگهی‌های ۱۰ روز اخیر را نشان بده
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="btn btn-info" type="submit">جستجو</button>
+                    </div>
+                </form>
+                  </div>
+                
+              </li>
+  
+            </ul>
+
+        </div>
+      </nav>
+      <!--main-->
+      <main class="p-3">
+        <div class="container">
+          <!--title-home-->
+          <div class="row" id="title-home">
+            <div class="col-md-12">
+              <h1 >   نیازمندیهای رایگان ادباز</h1>
+              <h2>خرید و فروش خودرو، املاک، آپارتمان، گوشی موبایل، تبلت، لوازم خانگی، لوازم دست دوم، استخدام و هر چه فکر کنید!</h2>
+            </div>
+          </div>
+          <!-- search Need -->
+          <div class="row bow-Shadows p-2" id="search-need" >
+            <div class="col-md-12 p-1">
+              <form action="" class="form-inline my-2 my-lg-0">
+                <div class="col-md-4"> 
+                  <select id="citySelection" name="city" class="browser-default custom-select form-control form-control-lg">
+                    <!-- <option selected>کل کشور</option>-->
+                    
+                        <option value="تهران">تهران</option>
+                    
+                        <option value="مشهد">مشهد</option>
+                    
+                        <option value="کرج">کرج</option>
+                    
+                        <option value="اصفهان">اصفهان</option>
+                    
+                        <option value="شیراز">شیراز</option>
+                    
+                        <option value="تبریز">تبریز</option>
+                    
+                        <option value="اهواز">اهواز</option>
+                    
+                        <option value="قم">قم</option>
+                    
+                        <option value="کرمانشاه">کرمانشاه</option>
+                    
+                        <option value="رشت">رشت</option>
+                    
+                        <option value="ارومیه">ارومیه</option>
+                    
+                        <option value="همدان">همدان</option>
+                    
+                        <option value="اراک">اراک</option>
+                    
+                        <option value="کرمان">کرمان</option>
+                    
+                        <option value="زاهدان">زاهدان</option>
+                    
+                        <option value="یزد">یزد</option>
+                    
+                        <option value="قزوین">قزوین</option>
+                    
+                        <option value="بندرعباس">بندرعباس</option>
+                    
+                        <option value="اردبیل">اردبیل</option>
+                    
+                        <option value="زنجان">زنجان</option>
+                    
+                </select>
+                </div>
+              <div class="col-md-4">
+                <input class="form-control mr-sm-2 form-control" type="search" name="locality" placeholder="نام محله (اختیاری)" aria-label="Search">
+                </div>
+               <div class="col-md-4">
+                <button class="btn  btn-danger my-2 my-sm-0 form-control" type="submit">جستجو</button>
+               </div>
+                
+            </form>
+            </div>
+          </div>
+          <!-- Map search results  -->
+          <div class="row bow-Shadows p-2" >
+            <div class="col-md-12 p-1" id="map" style = "width: 900px; height: 400px">
+             
+            </div>
+          </div>
+          <!-- Published ad -->
+          <div class="row" id="Published-ad">
+            <div class="col-md-12 mt-2">
+              <h3>              
+                <small class="text-muted">آگهی منتشر شده <span>3292938</span> </small>
+              </h3>
+              <!-- Published item -->
+              <div class="row" id="Published-item">
+                <div class="col-md-2 Published-item-item">
+                  <a href="#" class="bow-Shadows m-2 p-2">
+                    <span class="bg-pink"><i class="fas fa-users"></i></span>
+                    <div class="title">اجتماعی</div>
+                    <small>35064
+                    </small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span class="bg-dark-blue"><i class="fas fa-home"></i></span>
+                    <div class="title">املاک و مسکن </div>
+                    <small>669950</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span class="bg-banafsh"><i class="fab fa-bity"></i></span>
+                    <div class="title">لوازم الکترونیکی </div>
+                    <small>378351ر</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span class="bg-light-bluev"><i class="fas fa-car"></i></span>
+                    <div class="title">وسایل نقلیه </div>
+                    <small>509794</small>
+                  </a>
+                </div>
+
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span class="bg-orang"><i class="fas fa-user-cog"></i></span>
+                    <div class="title">خدمات </div>
+                    <small>509794</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span class="bg-broun"><i class="fas fa-coffee"></i></span>
+                    <div class="title">لوازم شخصی </div>
+                    <small>370993</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span><i class="fas fa-bicycle"></i></span>
+                    <div class="title">سرگرمی </div>
+                    <small>343478</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span><i class="fas fa-hands-helping"></i></span>
+                    <div class="title">کسب و کار </div>
+                    <small>99051</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span><i class="fas fa-fax"></i></span>
+                    <div class="title">لوازم خانگی</div>
+                    <small>739258</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span><i class="fab fa-black-tie"></i></span>
+                    <div class="title">استخدام </div>
+                    <small>67660</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span><i class="fas fa-mobile"></i></span>
+                    <div class="title">موبایل و تبلت </div>
+                    <small>739258</small>
+                  </a>
+                </div>
+                <div class="col-md-2 Published-item-item">
+                  <a style="display: block;" href="#" class="bow-Shadows m-2 p-2">
+                    <span><i class="fas fa-warehouse"></i></span>
+                    <div class="title">ارادی و تجاری </div>
+                    <small>343549</small>
+                  </a>
+                </div>
+            </div>
+          </div>
+      
+        </div>
+    </main>
+      <!-- footer -->
+      <footer>
+        <div class="row footer-Content pt-3 pb-3 pr-2 pl-2 ">
+          <div class="col-md-4" id="link-footer">
+            <p class="font-weight-bold">ادباز</p>
+            <a type="button" class="btn btn-link">چرا ادباز</a>
+            <a type="button" class="btn btn-link">تماس با ما</a>
+            <a type="button" class="btn btn-link">پرسش و پاسخ</a>
+            <a type="button" class="btn btn-link">قوانین و مقررات</a>
+          </div>
+          <div class="col-md-4" id="social-footer">
+            <p class="font-weight-bold">ادباز را در شبکه های اجتماعی دنبال کنید</p>
+            <div class="social">
+              <a href="#"><span class="social-item"><i class="fab fa-instagram"></i></span></a>
+              <a href="#"><span class="social-item"><i class="fab fa-telegram-plane"></i></span></a>
+              <a href="#"><span class="social-item"><i class="fab fa-pinterest"></i></span></a>
+              <a href="#"><span class="social-item"><i class="fab fa-twitter"></i></span></a>
+              
+            </div>
+          </div>
+          <div class="col-md-4" id="footer-app">
+            <a href="#"><img src="assets/img/app1.JPG" alt="app"></a>
+            <a href="#"><img src="assets/img/app2.JPG" alt="app"></a>
+        
+          </div>
+        </div>
+        <div class="row footer-copywriter p-2">
+          <div class="col-md-12 pl-2 pr-2">
+            <span >&copy; کلیه حقوق این سایت متعلق به ادباز می باشد </span>
+           
+       </div>
+        </div>
+      </footer>
+    <!-- dependency javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+     <!-- map -->
+     <script src="assets/js/leaflet.js"></script>
+     <script src="assets/js/map.js"></script>
+</body>
+</html>

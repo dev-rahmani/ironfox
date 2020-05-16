@@ -1,0 +1,37 @@
+nav .navbar{
+   background: $white;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.1);
+    ul li a:hover{
+        color:$adbaz;
+    }
+    ul li a{
+        transition: all 0.3 ease-in-out;
+    }
+    .square-round{
+        border-radius: 150rem;
+        background-color:$adbaz !important;
+        border: 0;
+        
+    }
+    #menu-form{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #index{
+        z-index: 9999;
+        input{
+            max-width: 40%;
+        }
+        select{
+            max-width: 30%;
+        }
+        #accordionEx{
+            direction: rtl;
+            max-width: 80%;
+
+        }
+    }
+   
+
+
+}

@@ -1,0 +1,92 @@
+main{
+    #title-home{
+        h1{
+            @include typoghraphystyle("IRANYekanBold",1.2rem, 600, 1.3 , #030a17 !important) ; 
+            margin: 0 0 1rem;
+            letter-spacing: 0;
+            text-transform: none;
+        
+
+        }
+        h2{
+            @include typoghraphystyle("IRANYekanLigh",0.75rem, 700, 1.3 , #030a17 !important); 
+            margin: 0 0 1rem;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+    }
+    #search-need{
+        select{
+            max-width: 100% !important;
+            display: inline-block !important;
+        }
+        input{
+            max-width:100% !important;
+            display: inline-block !important;
+        }
+        button{
+            max-width:100% !important;
+            display: inline-block !important;
+        }
+    }
+    #Published-ad{
+        h3{
+            .text-muted{
+                @include typoghraphystyle("IRANYekanBold", 0.9375rem, 700, 1.3 , #b0b3b6 !important); 
+                margin: 0 0 1rem;
+                letter-spacing: 0;
+                text-transform: none;
+            }
+        }
+        #Published-item{
+            .Published-item-item{
+                a{
+                    display: block;
+                    text-align: center;
+                    
+                    span{
+                        display: block;
+                        font-size: 2rem;
+                        margin: 0 auto .4rem;
+
+                    }
+                    .title{
+                        @include typoghraphystyle("IRANYekanBold",.75rem, 600, 1.3 , #030a17 !important); 
+                        margin-top: .25rem;
+
+                    }
+                    
+                    small{
+                        @include typoghraphystyle("IRANYekanBold",.75rem, 700, 1.3 , #999 !important); 
+                    }
+                   
+                }
+                a:hover{
+                    text-decoration: none;
+                    background: linear-gradient(rgba(243,81,81, 0.04),rgba(243,81,81, 0.04));
+                   
+                }
+            }
+        }
+     
+    }
+}
+.bg-pink{
+    color: #ff89a0;
+}
+.bg-dark-blue{
+    color:#0052d9;
+}
+.bg-banafsh{
+    color:#911265;
+}
+.bg-light-blue{
+    color:#4ca9ff;
+}
+.bg-orang{
+    color:#ffa056;
+}
+.bg-broun{
+    color:#d9a400;
+}

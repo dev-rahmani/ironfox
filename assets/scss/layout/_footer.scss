@@ -1,0 +1,74 @@
+//copy
+footer{
+    direction: rtl;
+    a{
+        display:block;
+    }
+    
+}
+footer .footer-Content{
+    margin-bottom: 0;
+    background: #eff0f1; 
+    text-align:center;
+
+}
+footer .footer-copywriter{
+    background: #d0d1d3;
+    color: #62666d;
+    text-align: center;
+}
+footer{
+    margin: 0 1rem;
+    //margin-bottom: .5rem;
+    #link-footer{
+        p{
+            @include typoghraphystyle("IRANYekanBold",.98rem, 700, 1.4 , #030a17 !important); 
+            margin-bottom: .6rem;
+            text-align: right;
+            padding-right: 0.80rem;
+
+
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            text-align: right;
+            transition: all 0.1s ease-in-out;
+            @include typoghraphystyle("IRANYekanBold",.75rem, 400, 1.3 , #030a17 !important);
+            &:hover{
+                color:rgb(243,81,81)!important;
+            } 
+        }
+       
+
+    }
+    #social-footer{
+        p{
+            @include typoghraphystyle("IRANYekanBold",.95rem, 700, 1.4 , #030a17 !important); 
+            margin-bottom: .8rem;
+           
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.5s ease-in-out;
+            padding: 0.5rem 0.25rem;
+            @include typoghraphystyle("IRANYekanBold",1.5rem, 400, 1.3 , #62666d !important); 
+            &:hover{
+                color:rgb(243,81,81)!important;
+            } 
+        }
+    }
+    #footer-app{
+        a{
+            margin: 0.70rem;
+        }
+
+    }
+    .footer-copywriter{
+        span{
+            @include typoghraphystyle("IRANYekanLigh",0.70rem, 400, 1.3 , #606266 !important); 
+        }
+    }
+}
